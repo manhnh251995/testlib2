@@ -42,7 +42,7 @@ pipeline {
                 sendEmail(currentBuild, ['nguyenmanh251995@gmail.com'])
             }
         }
-        success {
+        failure {
             script {
                 sendEmail(currentBuild, ['nguyenmanh251995@gmail.com'])
             }
