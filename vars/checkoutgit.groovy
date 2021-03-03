@@ -10,7 +10,7 @@ def call() {
         def repoScmVars = checkout([
             $class: 'GitSCM',
             branches: [[name: "main"]], 
-            browser: [$class: 'GithubWeb', repoUrl: 'https://github.com/canhnp/testlib.git'],
+            browser: [$class: 'GithubWeb', repoUrl: 'https://github.com/manhnh251995/node-hello.git'],
            // extensions: [
             //    [$class: 'CleanBeforeCheckout'],
            // ]     
