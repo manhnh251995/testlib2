@@ -5,7 +5,7 @@
 pipeline {
   agent any
   libraries {
-    lib('https://github.com/canhnp/testlib@main')
+    lib('github.com/canhnp/testlib@main')
   }
   stages {
     stage("Clone git"){
