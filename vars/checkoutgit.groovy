@@ -1,3 +1,3 @@
 def call(git) {
-  echo "${git}"
+  git clone ${git}
 }
