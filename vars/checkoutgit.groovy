@@ -1,4 +1,4 @@
-def call(str git) {
+def call(git) {
   pipeline {
     agent any
     stages {
