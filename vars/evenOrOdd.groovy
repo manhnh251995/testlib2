@@ -1,4 +1,4 @@
-def call(int buildNumber) {
+def call(int buildNumber,git) {
   if (buildNumber % 2 == 0) {
     pipeline {
       agent any
@@ -6,6 +6,7 @@ def call(int buildNumber) {
         stage("Even Stage") {
           steps {
             echo "The build number is even"
+            echo "git"
           }
         }
       }
@@ -17,6 +18,7 @@ def call(int buildNumber) {
         stage("Odd Stage"){
           steps {
             echo "The build number is odd"
+            echo "git"
           }
         }
       }
