@@ -1,4 +1,4 @@
-def call(git) {
+def call(String git) {
   pipeline {
     agent any
     stages {
