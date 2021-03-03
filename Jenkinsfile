@@ -23,7 +23,7 @@ pipeline {
     lib('https://github.com/cfpb/jenkins-shared-libraries@main')
   }
   stages {
-    stage(Build) {
+    stage('Build') {
       steps {
         sh'''
           echo "Manhnh"
