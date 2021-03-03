@@ -23,7 +23,9 @@ pipeline {
     libraries {
         lib('github.com/manhnh251995/jenkins-shared-libraries@main')
     }
-
+    environment {
+      NDGH = "MANHNH"
+    }
     stages {
         stage("Build") {
             steps {
