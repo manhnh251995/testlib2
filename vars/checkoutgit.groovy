@@ -1,4 +1,4 @@
-def clone-my-git( git ) {
+def call( git ) {
   pipeline {
     agent any
     stages {
