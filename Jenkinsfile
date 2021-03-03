@@ -39,17 +39,17 @@ pipeline {
     post {
         always {
             script {
-                sendEmail(currentBuild, ['nguyenmanh251995@gmail.com'])
+                sendEmail(currentBuild, ['nguyenmanh251995@gmail.com','phongcanhit@gmail.com'])
             }
         }
         success {
             script {
-                sendEmail(currentBuild, ['nguyenmanh251995@gmail.com'])
+                sendEmail(currentBuild, ['nguyenmanh251995@gmail.com','phongcanhit@gmail.com'])
             }
         }
         failure {
             script {
-                sendEmail(currentBuild, ['nguyenmanh251995@gmail.com'])
+                sendEmail(currentBuild, ['nguyenmanh251995@gmail.com','phongcanhit@gmail.com'])
             }
         }
     }
