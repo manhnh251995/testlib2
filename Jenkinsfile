@@ -29,7 +29,10 @@ pipeline {
     stages {
         stage("Build") {
             steps {
+               sh'''
                echo "foo"
+               exit 1
+               '''
             }
         }
     }
