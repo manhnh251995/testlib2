@@ -1,3 +1,10 @@
-def call(git) {
-   ["git", "clone", "https://github.com/manhnh251995/node-hello.git", "/Baseline/Package/Logistics/"].execute()
-}
+def call(URL){
+         
+        def url = "git clone " + URL;
+        def proc = url.execute();
+        def outputStream = new StringBuffer();
+        proc.waitForProcessOutput(outputStream, System.err)
+        return outputStream.toString();
+         
+         
+    }
