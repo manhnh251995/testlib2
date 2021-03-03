@@ -1,11 +1,21 @@
-def call(URL){
-         
-        def url = "sudo git clone " + URL;
-        println url
-        def proc = url.execute();
-        def outputStream = new StringBuffer();
-        proc.waitForProcessOutput(outputStream, System.out)
-        return outputStream.toString();
-         
-         
+def call() {
+
+    checkout scm
+
+    def scmVars = [:]
+
+    
+    dir('testlib') {
+
+        def repoScmVars = checkout([
+            $class: 'GitSCM',
+            branches: [[name: "main"]], 
+            browser: [$class: 'GithubWeb', repoUrl: 'https://github.com/canhnp/testlib.git'],
+           // extensions: [
+            //    [$class: 'CleanBeforeCheckout'],
+           // ]     
+        ])
+        //scmVars.put('testlib', repoScmVars)
     }
+}
+
