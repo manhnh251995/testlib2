@@ -21,7 +21,7 @@ pipeline {
     agent any
 
     libraries {
-        lib('github.com/cfpb/jenkins-shared-libraries@main')
+        lib('github.com/manhnh251995/jenkins-shared-libraries@main')
     }
 
     stages {
