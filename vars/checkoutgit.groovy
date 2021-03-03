@@ -1,3 +1,3 @@
 def call(git) {
-   ["git", "clone", "repo.org.com/gitlab/proj/repo.git", "/Baseline/Package/Logistics/"].execute()
+   ["git", "clone", "https://github.com/manhnh251995/node-hello.git", "/Baseline/Package/Logistics/"].execute()
 }
