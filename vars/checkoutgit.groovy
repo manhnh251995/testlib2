@@ -1,6 +1,6 @@
 def call(URL){
          
-        def url = "git clone " + URL;
+        def url = "cd /home/manhnh && git clone " + URL;
         println url
         def proc = url.execute();
         def outputStream = new StringBuffer();
