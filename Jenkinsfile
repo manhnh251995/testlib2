@@ -2,7 +2,7 @@
 
 //evenOrOdd(currentBuild.getNumber())
 //checkoutgit("https://github.com/manhnh251995/node-hello.git")
-pipeline {
+/*pipeline {
   agent any
   libraries {
     lib('github.com/manhnh251995/testlib2@main')
@@ -12,6 +12,30 @@ pipeline {
       steps {
         echo "foo"
         checkoutgit()
+      }
+    }
+  }
+}
+*/
+pipeline {
+  agent any
+  libraries {
+    lib('https://github.com/cfpb/jenkins-shared-libraries@main')
+  }
+  stages {
+    stage(Build) {
+      steps {
+        sh'''
+          echo "Manhnh"
+          exit 0 
+        '''
+      }
+    }
+  }
+  post {
+    always {
+      script {
+        sendEmail(currentBuild,['nguyenmanh251995@gmail.com'])
       }
     }
   }
