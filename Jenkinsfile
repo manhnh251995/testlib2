@@ -25,7 +25,7 @@ pipeline {
     }
 
     stages {
-        stage("Echostage") {
+        stage("Build") {
             steps {
                echo "foo"
             }
@@ -33,6 +33,16 @@ pipeline {
     }
     post {
         always {
+            script {
+                sendEmail(currentBuild, ['nguyenmanh251995@gmail.com'])
+            }
+        }
+        success {
+            script {
+                sendEmail(currentBuild, ['nguyenmanh251995@gmail.com'])
+            }
+        }
+        success {
             script {
                 sendEmail(currentBuild, ['nguyenmanh251995@gmail.com'])
             }
