@@ -18,25 +18,24 @@
 }
 */
 pipeline {
-  agent any
-  libraries {
-    lib('https://github.com/cfpb/jenkins-shared-libraries@main')
-  }
-  stages {
-    stage('Build') {
-      steps {
-        sh'''
-          echo "Manhnh"
-          exit 0 
-        '''
-      }
+    agent any
+
+    libraries {
+        lib('github.com/cfpb/jenkins-shared-libraries@main')
     }
-  }
-  post {
-    always {
-      script {
-        sendEmail(currentBuild,['nguyenmanh251995@gmail.com'])
-      }
+
+    stages {
+        stage("Echostage") {
+            steps {
+               echo "foo"
+            }
+        }
     }
-  }
+    post {
+        always {
+            script {
+                sendEmail(currentBuild, ['nguyenmanh251995@gmail.com'])
+            }
+        }
+    }
 }
