@@ -5,13 +5,13 @@
 pipeline {
   agent any
   libraries {
-    lib('github.com/canhnp/testlib@main')
+    lib('github.com/manhnh251995/testlib2@main')
   }
   stages {
     stage("Clone git"){
       steps {
         echo "foo"
-        release()
+        checkoutgit()
       }
     }
   }
